@@ -21,23 +21,22 @@ public class No_1110_더하기_사이클 {
 		// 프로그램 실행
 		while (true) {
 			i++;
-			
-			if(number_N>=10) {
-				int tmp = (number_N 
-				
-				number_N = Integer.parseInt((""+number_N).split("")[1]+);
-			}
-			else {
-				number_N = Integer.parseInt((""+number_N+number_N));
-				
-				
+
+			if (number_N >= 10) {
+				int tmp = ((number_N / 10) + (number_N % 10)) % 10;
+
+				number_N = Integer.parseInt(("" + number_N).split("")[1] + tmp);
+			} else {
+				number_N = Integer.parseInt(("" + number_N + number_N));
+
 			}
 			
-		
-		
+			if (number_N == N) {
+				System.out.println(i);
+				break;
+			}
+
 		}
-
-
 
 	}// main 메서드
 
